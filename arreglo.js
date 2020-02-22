@@ -1,4 +1,4 @@
-var animales = ['oso','leon','conejo'];
+var animales = ['oso','leon','conejo','elefante'];
 
 animales.push('raton');
 animales.unshift('perro');
