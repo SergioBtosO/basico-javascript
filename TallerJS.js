@@ -135,8 +135,12 @@ var carros = [
     { marca: 'Nissan', modelo: 2021 },
 ]
 
-carros.forEach(carro => {
- if(carro.modelo == 2018){
-    console.log(carro.marca);
- }
-});
+function encontrarModelo(carros) {
+    carros.forEach(carro => {
+    if(carro.modelo == 2018){
+        console.log(carro.marca);
+    }
+    });
+}
+
+encontrarModelo(carros);
