@@ -57,17 +57,10 @@ var ayer='viernes';
 var hoy='sabado';
 var manana='domingo';
 
-function esLaboral(dia) {
-    var labora='no';
-    for(var i=0; i<diaslaborales.length; i++)
-    {
-        if(diaslaborales[i]==dia)
-        {
-            labora='si';
-        }
-    }
-    return labora;
-};
+
+function esLaboral(dia){
+    return diaslaborales.indexOf(dia)===-1 ? 'no':'si';
+}
 
 console.log(`El ${ayer} ${esLaboral(ayer)} es laboral.` );
 console.log(`El ${hoy} ${esLaboral(hoy)} es laboral.` );
