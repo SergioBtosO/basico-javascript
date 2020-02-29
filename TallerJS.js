@@ -80,7 +80,7 @@ var notas = [1,2,3,5,5,0,4,5,4,8];
 function calcularPromedio (numeros){
     var suma=0,promedio=0;
     console.log('Las notas:');
-    for(var i = 0; i <= numeros.length; i++){
+    for(var i = 0; i < numeros.length; i++){
         suma = suma + numeros[i];
         console.log(numeros[i]);
     }
@@ -93,14 +93,50 @@ function calcularPromedio (numeros){
 calcularPromedio(notas);
 
 
-/*6) Escribir una función que reciba un arreglo de números y retorne la suma de todos ellos
-7) Escribir una función que reciba una lista de nombres de perros y retorne cuales empiezan por "p"
-8) Escribir una función que reciba un un arreglo el siguiente arreglo con objetos y retorne cuantos son modelos superiores a 2018
+/*6) Escribir una función que reciba un arreglo de números y retorne la suma de todos ellos*/
+var numeros = [1,2,3,5,5,0,4,5,4,8];
 
-    var carros = [
-        { marca: 'Mazda', modelo: 2029 },
-        { marca: 'Chevrolet', modelo: 2017 },
-        { marca: 'Jeep', modelo: 2018 },
-        { marca: 'Ferrari', modelo: 2015 },
-        { marca: 'Nissan', modelo: 2021 },
-    ]*/
+function sumarNumeros (numeros){
+    var suma=0;
+    console.log('Las notas:');
+    for(var i = 0; i < numeros.length; i++){
+        suma = suma + numeros[i];
+        console.log(numeros[i]);
+    }
+    console.log(`La suma de los numeros: ${suma}`);
+
+};
+
+sumarNumeros(numeros);
+
+/*7) Escribir una función que reciba una lista de nombres de perros y retorne cuales empiezan por "p"*/
+var perros = ['paco','luna','pecas','muñeco','pilon'];
+
+function hallarNombre (nombres){ 
+    for(var i = 0; i < nombres.length; i++){
+
+        if(nombres[i].substr(0,1) == 'p'){
+            console.log(nombres[i]);
+        }
+    }
+};
+
+hallarNombre(perros);
+
+
+
+/*8) Escribir una función que reciba un un arreglo el siguiente arreglo con objetos y retorne cuantos son modelos superiores a 2018*/
+
+var carros = [
+    { marca: 'Mazda', modelo: 2029 },
+    { marca: 'Chevrolet', modelo: 2017 },
+    { marca: 'Jeep', modelo: 2018 },
+    { marca: 'Ferrari', modelo: 2015 },
+    { marca: 'Nissan', modelo: 2021 },
+]
+
+carros.forEach(carro => {
+ if(carro.modelo == 2018){
+    console.log(carro.marca);
+ }
+});
