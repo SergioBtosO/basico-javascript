@@ -129,11 +129,14 @@ var carros = [
 ]
 
 function encontrarModelo(carros) {
+    var cont=0;
     carros.forEach(carro => {
     if(carro.modelo > 2018){
-        console.log(carro.marca);
+        cont++
     }
     });
+
+    console.log(cont);
 }
 
 encontrarModelo(carros);
